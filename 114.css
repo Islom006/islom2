@@ -1,0 +1,583 @@
+
+/* =========================
+   UMUMIY SOZLAMALAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --text: #172033;
+    --muted: #718096;
+    --border: #e3e8f0;
+    --background: #f5f7ff;
+    --white: #ffffff;
+    --success: #15803d;
+    --danger: #dc2626;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* =========================
+   YUQORI MENYU
+========================= */
+
+.header {
+    min-height: 82px;
+    padding: 16px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: white;
+    background: var(--primary);
+    border-radius: 13px;
+}
+
+.logo-blue {
+    color: var(--primary);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navigation a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.nav-login,
+.nav-register {
+    padding: 11px 17px;
+    border-radius: 9px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.nav-login {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    background: white;
+}
+
+.nav-login:hover {
+    background: #eef2ff;
+}
+
+.nav-register {
+    color: white;
+    border: 1px solid var(--primary);
+    background: var(--primary);
+}
+
+.nav-register:hover {
+    background: var(--primary-dark);
+}
+
+/* =========================
+   ASOSIY QISM
+========================= */
+
+.main {
+    width: min(1180px, 90%);
+    min-height: calc(100vh - 145px);
+    margin: 0 auto;
+    padding: 55px 0;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    align-items: center;
+    gap: 65px;
+}
+
+/* Chap tomondagi matn */
+
+.welcome {
+    position: relative;
+}
+
+.welcome-badge {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #dddafe;
+    border-radius: 30px;
+    background: #eeedff;
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 23px;
+}
+
+.welcome h1 {
+    max-width: 550px;
+    font-size: clamp(35px, 4vw, 52px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+}
+
+.welcome h1 span {
+    color: var(--primary);
+}
+
+.welcome > p {
+    max-width: 470px;
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.benefits {
+    display: grid;
+    gap: 15px;
+    margin-top: 27px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #465268;
+}
+
+.benefit-icon {
+    width: 23px;
+    height: 23px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: var(--success);
+    font-weight: bold;
+}
+
+/* Dekorativ rasm o'rniga CSS illustratsiya */
+
+.shopping-art {
+    position: relative;
+    width: 260px;
+    height: 185px;
+    margin: 25px auto 0;
+    display: grid;
+    place-items: center;
+}
+
+.art-circle {
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    background: linear-gradient(135deg, #e0e7ff, #ede9fe);
+    border-radius: 50%;
+}
+
+.shopping-bag {
+    z-index: 1;
+    width: 105px;
+    height: 105px;
+    border-radius: 15px 15px 24px 24px;
+    background: linear-gradient(135deg, #6366f1, #4338ca);
+    box-shadow: 0 20px 35px #4f46e540;
+    display: grid;
+    place-items: center;
+    transform: rotate(-5deg);
+}
+
+.bag-handle {
+    position: absolute;
+    width: 43px;
+    height: 29px;
+    border: 6px solid #6366f1;
+    border-bottom: 0;
+    border-radius: 18px 18px 0 0;
+    top: -19px;
+}
+
+.bag-letter {
+    font-size: 45px;
+    color: white;
+    font-weight: 800;
+}
+
+.floating-card {
+    position: absolute;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #1e293b18;
+    font-size: 23px;
+}
+
+.card-one {
+    top: 15px;
+    left: 12px;
+}
+
+.card-two {
+    right: 5px;
+    top: 40px;
+}
+
+.card-three {
+    right: 25px;
+    bottom: 0;
+}
+
+/* =========================
+   LOGIN VA REGISTER KARTASI
+========================= */
+
+.auth-section {
+    width: 100%;
+}
+
+.auth-card {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #edf0f6;
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: 0 20px 60px #29325a12;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 12px;
+    background: #f1f3f9;
+    margin-bottom: 28px;
+}
+
+.tab {
+    padding: 12px 7px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.tab.active {
+    background: white;
+    color: var(--primary);
+    box-shadow: 0 2px 8px #1e293b10;
+}
+
+.form-heading {
+    margin-bottom: 22px;
+}
+
+.form-heading h2 {
+    font-size: 27px;
+    margin-bottom: 9px;
+}
+
+.form-heading p {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.form-group {
+    min-width: 0;
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #344054;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+    color: var(--text);
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #a0a9b8;
+    font-size: 13px;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px #4f46e51a;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.password-box:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px #4f46e51a;
+}
+
+.password-box input {
+    border: none;
+    box-shadow: none !important;
+    flex: 1;
+    width: 0;
+}
+
+.show-password {
+    border: none;
+    background: white;
+    color: var(--primary);
+    padding: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 8px 18px #4f46e526;
+    transition: 0.2s;
+}
+
+.submit-button span {
+    font-size: 20px;
+}
+
+.submit-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.switch-text {
+    margin-top: 21px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.text-button {
+    border: none;
+    background: transparent;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.text-button:hover {
+    text-decoration: underline;
+}
+
+.security-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f6;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.message {
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.message.error {
+    background: #fef2f2;
+    color: var(--danger);
+}
+
+.message.success {
+    background: #f0fdf4;
+    color: var(--success);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================
+   PASTKI QISM
+========================= */
+
+.footer {
+    padding: 22px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    background: white;
+    border-top: 1px solid var(--border);
+}
+
+/* =========================
+   TELEFON EKRANIGA MOSLASHISH
+========================= */
+
+@media (max-width: 950px) {
+    .main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        max-width: 520px;
+    }
+
+    .welcome {
+        text-align: center;
+    }
+
+    .welcome h1,
+    .welcome > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .benefits {
+        display: inline-grid;
+        text-align: left;
+    }
+
+    .shopping-art {
+        display: none;
+    }
+
+    .auth-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 14px 5%;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .navigation {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .navigation a {
+        display: none;
+    }
+
+    .navigation button {
+        flex: 1;
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .main {
+        width: 92%;
+        padding: 32px 0;
+    }
+
+    .welcome h1 {
+        font-size: 35px;
+    }
+
+    .welcome > p {
+        font-size: 14px;
+    }
+
+    .auth-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-heading h2 {
+        font-size: 24px;
+    }
+}

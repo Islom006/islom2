@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savdo Market | Kirish</title>
+    <link rel="stylesheet" href="114.css">
+    <script src="114.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">S</span>
+            <span>Savdo<span class="logo-blue">Market</span></span>
+        </a>
+
+        <nav class="navigation">
+            <a href="index.html">Bosh sahifa</a>
+            <button type="button" class="nav-login" id="openLogin">
+                Kirish
+            </button>
+            <button type="button" class="nav-register" id="openRegister">
+                Ro‘yxatdan o‘tish
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="welcome">
+            <div class="welcome-badge">🛍️ Siz uchun qulay xaridlar</div>
+
+            <h1>Xarid qilishni <span>biz bilan</span> boshlang!</h1>
+
+            <p>
+                Sevimli mahsulotlaringizni toping, buyurtma bering
+                va xaridlaringizni oson boshqaring.
+            </p>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <span class="benefit-icon">✓</span>
+                    <span>Qulay va sodda foydalanish</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">✓</span>
+                    <span>Shaxsiy hisobingiz</span>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">✓</span>
+                    <span>Buyurtmalarni boshqarish</span>
+                </div>
+            </div>
+
+            <div class="shopping-art" aria-hidden="true">
+                <div class="art-circle"></div>
+                <div class="shopping-bag">
+                    <div class="bag-handle"></div>
+                    <div class="bag-letter">S</div>
+                </div>
+                <div class="floating-card card-one">🎁</div>
+                <div class="floating-card card-two">🛒</div>
+                <div class="floating-card card-three">✨</div>
+            </div>
+        </section>
+
+        <section class="auth-section">
+            <div class="auth-card">
+
+                <div class="tabs">
+                    <button type="button" class="tab active" id="loginTab">
+                        Kirish
+                    </button>
+                    <button type="button" class="tab" id="registerTab">
+                        Ro‘yxatdan o‘tish
+                    </button>
+                </div>
+
+                <div class="form-heading">
+                    <h2 id="formTitle">Xush kelibsiz!</h2>
+                    <p id="formSubtitle">
+                        Hisobingizga kirish uchun ma’lumotlarni kiriting.
+                    </p>
+                </div>
+
+                <div class="message" id="formMessage" role="status"
+                     aria-live="polite" hidden></div>
+
+                <!-- KIRISH FORMASI -->
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email manzilingiz</label>
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            name="email"
+                            placeholder="example@gmail.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Parol</label>
+                        <div class="password-box">
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="password"
+                                placeholder="Parolingizni kiriting"
+                                autocomplete="current-password"
+                                required
+                            >
+                            <button type="button" class="show-password"
+                                    data-target="loginPassword">
+                                Ko‘rsatish
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        Kirish <span>→</span>
+                    </button>
+
+                    <p class="switch-text">
+                        Hisobingiz yo‘qmi?
+                        <button type="button" class="text-button"
+                                id="goRegister">
+                            Ro‘yxatdan o‘ting
+                        </button>
+                    </p>
+                </form>
+
+                <!-- RO‘YXATDAN O‘TISH FORMASI -->
+                <form id="registerForm" hidden>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Ism</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                placeholder="Ismingiz"
+                                autocomplete="given-name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Familiya</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                placeholder="Familiyangiz"
+                                autocomplete="family-name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email manzilingiz</label>
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            name="email"
+                            placeholder="example@gmail.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPhone">Telefon raqami</label>
+                        <input
+                            type="tel"
+                            id="registerPhone"
+                            name="phone"
+                            placeholder="+998 88 605 11 90"
+                            autocomplete="tel"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Parol</label>
+                        <div class="password-box">
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                name="password"
+                                placeholder="Kamida 8 ta belgi"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+                            <button type="button" class="show-password"
+                                    data-target="registerPassword">
+                                Ko‘rsatish
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passwordConfirm">Parolni tasdiqlash</label>
+                        <div class="password-box">
+                            <input
+                                type="password"
+                                id="passwordConfirm"
+                                name="passwordConfirm"
+                                placeholder="Parolni qayta kiriting"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+                            <button type="button" class="show-password"
+                                    data-target="passwordConfirm">
+                                Ko‘rsatish
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        Hisob yaratish <span>→</span>
+                    </button>
+
+                    <p class="switch-text">
+                        Hisobingiz bormi?
+                        <button type="button" class="text-button"
+                                id="goLogin">
+                            Kirish
+                        </button>
+                    </p>
+                </form>
+
+                <div class="security-note">
+                    <span>🔒</span>
+                    <span>Shaxsiy ma’lumotlaringiz himoyalangan bo‘lishi kerak.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        © 2026 SavdoMarket. Barcha huquqlar himoyalangan.
+    </footer>
+
+</body>
+</html>
